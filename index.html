@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sikkim SmartNav</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+  <h1>Sikkim SmartNav</h1>
+    <p>Designing a Smart City in the Himalayan State</p>
+    <nav>
+      <ul>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#districts">Districts</a></li>
+        <li><a href="#planner">Planner</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="map">
+      <h2>Interactive Map</h2>
+      <div id="map-container">
+        <p>[Map of Sikkim will appear here – Interactive coming soon]</p>
+      </div>
+    </section>
+    
+    <section id="districts">
+      <h2>District Highlights</h2>
+      <div class="district-grid">
+        <div class="district-card" onclick="showDistrict('East')">
+          <h3>East Sikkim</h3>
+          <p>Gangtok, Rumtek Monastery</p>
+        </div>
+        <div class="district-card" onclick="showDistrict('West')">
+          <h3>West Sikkim</h3>
+          <p>Pelling, Pemayangtse</p>
+        </div>
+        <div class="district-card" onclick="showDistrict('South')">
+          <h3>South Sikkim</h3>
+          <p>Namchi, Tashiding Monastery</p>
+        </div>
+        <div class="district-card" onclick="showDistrict('North')">
+          <h3>North Sikkim</h3>
+          <p>Lachen, Lachung</p>
+        </div>
+      </div>
+      <div id="district-info"></div>
+    </section>
+    
+    <section id="planner">
+      <h2>Smart Travel Planner</h2>
+      <form id="planner-form">
+        <label for="location">Starting Point:</label>
+        <input type="text" id="location" placeholder="e.g. Gangtok" required />
+
+        <label for="interest">Select Interest:</label>
+        <select id="interest">
+          <option value="temples">Temples</option>
+          <option value="nature">Nature</option>
+          <option value="food">Local Food</option>
+          <option value="culture">Culture</option>
+        </select>
+
+        <button type="submit">Plan Trip</button>
+      </form>
+      <div id="plan-result"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Made by Avni Sharma of class 11th - A</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
